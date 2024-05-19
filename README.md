@@ -1,5 +1,5 @@
 # LiveEventBus
-![license](https://img.shields.io/github/license/JeremyLiao/LiveEventBus.svg) [![version](https://img.shields.io/badge/JCenter-v1.7.3-blue.svg)](https://mvnrepository.com/artifact/com.jeremyliao/live-event-bus) [![version](https://img.shields.io/badge/maven-v1.8.0-blue)](https://search.maven.org/artifact/io.github.jeremyliao/live-event-bus)
+[![License](https://jitpack.io/v/neo-turak/LiveEventBus.svg)](https://jitpack.io/#neo-turak/LiveEventBus)
 
 LiveEventBus是一款Android消息总线，基于LiveData，具有生命周期感知能力，支持Sticky，支持AndroidX，支持跨进程，支持跨APP
 ![logo](https://user-images.githubusercontent.com/23290617/68295106-97e64380-00cc-11ea-919d-605f123ec084.png)
@@ -31,27 +31,24 @@ LiveEventBus | :white_check_mark: | :white_check_mark: | :white_check_mark: | :w
 #### 想了解更多？请点击：[全面了解Android消息总线](https://github.com/JeremyLiao/SmartEventBus/blob/master/docs/bus_all.md)
 
 ## 使用
-> 1.8及以上版本全面迁移至maven，同时groupID变为io.github.jeremyliao，1.8以下版本保留JCenter
-#### maven
+1.添加Jitpack仓库。（根目录build.gradle内）
+```Gradle
+dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+2.依赖：
+```Gradle
+dependencies {
+	        implementation 'com.github.neo-turak:LiveEventBus:1.8.1'
+	}
+```
 
-- 非AndroidX
-```
-implementation 'io.github.jeremyliao:live-event-bus:1.8.0'
-```
-- AndroidX
-```
-implementation 'io.github.jeremyliao:live-event-bus-x:1.8.0'
-```
-#### JCenter
-- 非AndroidX
 
-```
-implementation 'com.jeremyliao:live-event-bus:1.7.3'
-```
-- AndroidX
-```
-implementation 'com.jeremyliao:live-event-bus-x:1.7.3'
-```
 
 ## 快速开始
 ### 订阅消息
